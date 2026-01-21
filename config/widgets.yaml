@@ -2,7 +2,7 @@
 - resources:
     cpu: true
     memory: true
-    disk: /
+    disk: /host
     cputemp: true
     uptime: true
     label: Pi5
