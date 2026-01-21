@@ -1,4 +1,0 @@
----
-Applications:
-  socket: /var/run/docker.sock
-  network: dokploy-network

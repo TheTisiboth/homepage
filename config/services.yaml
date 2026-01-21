@@ -15,3 +15,14 @@
         icon: docker.png
         href: https://dokploy.home.leojan.fr
         description: Container management platform
+
+- Applications:
+    - AdGuard Home:
+        icon: adguard-home.png
+        href: https://adguard.leojan.fr
+        description: DNS ad blocker & privacy protection
+
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: https://status.leojan.fr
+        description: Uptime monitoring & status page
