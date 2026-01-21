@@ -10,7 +10,8 @@
         href: https://glances.leojan.fr
         description: System monitoring dashboard
 
+- Infrastructure:
     - Dokploy:
         icon: docker.png
         href: https://dokploy.home.leojan.fr
-        description: Container management
+        description: Container management platform

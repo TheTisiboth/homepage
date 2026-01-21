@@ -1,4 +1,4 @@
 ---
-my-docker:
+Applications:
   socket: /var/run/docker.sock
   network: dokploy-network
