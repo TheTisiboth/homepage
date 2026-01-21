@@ -17,7 +17,7 @@ Dashboard displaying Pi5 system metrics with graphs and Docker containers via au
 1. Create new compose project in Dokploy UI
 2. Point to this repository
 3. Deploy
-4. Access at `http://your-pi-ip:3002`
+4. Access at `http://your-pi-ip:3003`
 
 Dokploy automatically:
 - Creates dokploy-network
@@ -52,7 +52,7 @@ labels:
 
 ## Services
 
-- **homepage**: Main dashboard (port 3002)
+- **homepage**: Main dashboard (port 3003)
 - **netdata**: Real-time performance monitoring (port 19999)
   - Access full Netdata UI at `http://your-pi-ip:19999`
   - 1000+ metrics tracked
@@ -81,7 +81,7 @@ Or edit through Dokploy UI file manager and restart container.
 
 ## Notes
 
-- Homepage runs on port 3002
+- Homepage runs on port 3003
 - Netdata runs on port 19999 (full dashboard access)
 - Uses dokploy-network for container integration
 - Glances provides detailed metrics with 2-second refresh
