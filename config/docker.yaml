@@ -1,6 +1,4 @@
 ---
-# Docker auto-discovery
-# This will automatically discover all running containers
 my-docker:
-  host: /var/run/docker.sock
-  show: running
+  socket: /var/run/docker.sock
+  network: dokploy-network

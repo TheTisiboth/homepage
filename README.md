@@ -52,9 +52,8 @@ labels:
 
 ## Services
 
-- **homepage**: Main dashboard (port 3003)
-- **netdata**: Real-time performance monitoring (port 19999)
-  - Access full Netdata UI at `http://your-pi-ip:19999`
+- **homepage**: Main dashboard (https://dashboard.leojan.fr or http://192.168.178.13:3003)
+- **netdata**: Real-time performance monitoring (https://netdata.leojan.fr or http://192.168.178.13:19999)
   - 1000+ metrics tracked
   - Interactive charts with 1-second granularity
   - Zero configuration needed
@@ -81,8 +80,8 @@ Config auto-syncs from repo on every deploy:
 
 ## Notes
 
-- Homepage runs on port 3003
-- Netdata runs on port 19999 (full dashboard access)
+- Homepage: https://dashboard.leojan.fr (or port 3003 locally)
+- Netdata: https://netdata.leojan.fr (or port 19999 locally)
 - Uses dokploy-network for container integration
 - Glances provides detailed metrics with 2-second refresh
 - Netdata provides 1000+ metrics with 1-second granularity
