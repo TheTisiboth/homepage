@@ -17,20 +17,12 @@ Dashboard displaying Pi5 system metrics with graphs and Docker containers via au
 1. Create new compose project in Dokploy UI
 2. Point to this repository
 3. Deploy
-4. Copy config files to volume after first deploy:
-```bash
-docker cp config/settings.yaml homepage:/app/config/
-docker cp config/widgets.yaml homepage:/app/config/
-docker cp config/services.yaml homepage:/app/config/
-docker cp config/docker.yaml homepage:/app/config/
-docker restart homepage
-```
-5. Access at `http://your-pi-ip:3001`
+4. Access at `http://your-pi-ip:3001`
 
 Dokploy automatically:
 - Creates dokploy-network
-- Creates named volumes
-- Handles container lifecycle
+- Creates named volumes for Netdata
+- Mounts config directory from repo
 
 ## Configuration
 
@@ -70,26 +62,22 @@ labels:
 
 ## Volumes
 
-- `homepage-config`: Named volume for persistent config (Docker-managed)
+- `./config`: Bind mount for homepage config (edit directly in repo)
 - `netdata-config`: Netdata configuration
 - `netdata-lib`: Netdata database/metrics storage
 - `netdata-cache`: Netdata cache
 
 ## Editing Config
 
-Config is in `homepage-config` named volume. To edit:
+Config files in `./config/` directory are mounted directly. Edit and restart:
 
 ```bash
-# Copy updated file from host
-docker cp config/widgets.yaml homepage:/app/config/
-docker restart homepage
-
-# Or exec into container and edit directly
-docker exec -it homepage sh
-vi /app/config/widgets.yaml
-exit
+# Edit config files directly
+vi config/widgets.yaml
 docker restart homepage
 ```
+
+Or edit through Dokploy UI file manager and restart container.
 
 ## Notes
 
