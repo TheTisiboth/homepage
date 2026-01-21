@@ -69,15 +69,15 @@ labels:
 
 ## Editing Config
 
-Config files in `./config/` directory are mounted directly. Edit and restart:
+Config auto-syncs from repo on every deploy:
 
-```bash
-# Edit config files directly
-vi config/widgets.yaml
-docker restart homepage
-```
+1. Edit config files in repo locally
+2. Commit and push to git
+3. Redeploy in Dokploy (or auto-deploys if webhook configured)
+4. Init container syncs latest config to volume automatically
+5. Homepage restarts with new config
 
-Or edit through Dokploy UI file manager and restart container.
+**No manual steps needed** - just push to git and redeploy.
 
 ## Notes
 
