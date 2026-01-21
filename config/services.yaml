@@ -7,7 +7,7 @@
 
     - Glances:
         icon: glances.png
-        href: http://glances:61208
+        href: http://192.168.178.13:61208
         description: System monitoring API
 
     - Dokploy:
