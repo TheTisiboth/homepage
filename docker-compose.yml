@@ -13,7 +13,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - HOMEPAGE_ALLOWED_HOSTS=
+      - HOMEPAGE_ALLOWED_HOSTS=dashboard.leojan.fr,192.168.178.13:3003,localhost:3003
     restart: unless-stopped
     networks:
       - dokploy-network

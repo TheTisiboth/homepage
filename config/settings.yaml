@@ -5,6 +5,7 @@ cardBlur: md
 theme: dark
 color: slate
 headerStyle: boxed
+target: _self
 layout:
   Monitoring:
     style: row
