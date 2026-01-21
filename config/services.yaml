@@ -1,0 +1,11 @@
+---
+- Monitoring:
+    - Netdata:
+        icon: netdata.png
+        href: http://netdata:19999
+        description: Real-time performance monitoring with 1000+ metrics
+
+    - Glances:
+        icon: glances.png
+        href: http://glances:61208
+        description: System monitoring API
