@@ -10,6 +10,6 @@ layout:
   Monitoring:
     style: row
     columns: 3
-  Docker:
+  Services:
     style: row
     columns: 4

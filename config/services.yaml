@@ -9,3 +9,8 @@
         icon: glances.png
         href: http://glances:61208
         description: System monitoring API
+
+    - Dokploy:
+        icon: docker.png
+        href: https://dokploy.home.leojan.fr
+        description: Docker management platform
