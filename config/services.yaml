@@ -1,16 +1,41 @@
 ---
+- System Metrics:
+    - CPU Usage:
+        icon: mdi-cpu-64-bit
+        widget:
+          type: glances
+          url: https://glances.leojan.fr
+          metric: cpu
+          chart: true
+
+    - Memory:
+        icon: mdi-memory
+        widget:
+          type: glances
+          url: https://glances.leojan.fr
+          metric: memory
+          chart: true
+
+    - Network:
+        icon: mdi-ethernet
+        widget:
+          type: glances
+          url: https://glances.leojan.fr
+          metric: network:eth0
+          chart: true
+
 - Monitoring:
     - Netdata:
         icon: netdata.png
         href: https://netdata.leojan.fr
-        description: Real-time performance monitoring with 1000+ metrics
+        description: Real-time performance monitoring
 
     - Glances:
-        icon: glances.png
+        icon: si-grafana
         href: https://glances.leojan.fr
-        description: System monitoring API
+        description: System monitoring dashboard
 
     - Dokploy:
         icon: docker.png
         href: https://dokploy.home.leojan.fr
-        description: Docker management platform
+        description: Container management
