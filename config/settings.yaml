@@ -6,10 +6,14 @@ theme: dark
 color: slate
 headerStyle: boxed
 target: _self
+hideVersion: true
+showStats: false
 layout:
   Monitoring:
     style: row
     columns: 3
+    header: true
   Services:
     style: row
     columns: 4
+    header: true

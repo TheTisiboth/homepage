@@ -6,73 +6,54 @@
     uptime: true
     label: Pi5
 
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: cpu
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: memory
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: disk:mmcblk0p2
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: network:eth0
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: sensor:cpu_thermal
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: sensor:rp1_adc
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: sensor:pwmfan
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
-- glances:
-    url: https://glances.leojan.fr
-    version: 4
-    metric: sensor:rpi_volt
-    chart: true
-    pointsLimit: 30
-    refreshInterval: 2000
-
 - datetime:
     text_size: xl
     format:
       dateStyle: long
       timeStyle: short
       hour12: false
+
+- glances:
+    url: https://glances.leojan.fr
+    version: 4
+    metric: cpu
+    chart: true
+    pointsLimit: 50
+    refreshInterval: 3000
+    label: CPU Usage
+
+- glances:
+    url: https://glances.leojan.fr
+    version: 4
+    metric: memory
+    chart: true
+    pointsLimit: 50
+    refreshInterval: 3000
+    label: Memory
+
+- glances:
+    url: https://glances.leojan.fr
+    version: 4
+    metric: disk:mmcblk0p2
+    chart: true
+    pointsLimit: 50
+    refreshInterval: 5000
+    label: Disk
+
+- glances:
+    url: https://glances.leojan.fr
+    version: 4
+    metric: network:eth0
+    chart: true
+    pointsLimit: 50
+    refreshInterval: 3000
+    label: Network
+
+- glances:
+    url: https://glances.leojan.fr
+    version: 4
+    metric: sensor:cpu_thermal
+    chart: true
+    pointsLimit: 50
+    refreshInterval: 5000
+    label: CPU Temp
