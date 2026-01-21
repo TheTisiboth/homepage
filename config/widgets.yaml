@@ -7,7 +7,7 @@
     label: Pi5
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: cpu
     chart: true
@@ -15,7 +15,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: memory
     chart: true
@@ -23,7 +23,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: disk:mmcblk0p2
     chart: true
@@ -31,7 +31,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: network:eth0
     chart: true
@@ -39,7 +39,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: sensor:cpu_thermal
     chart: true
@@ -47,7 +47,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: sensor:rp1_adc
     chart: true
@@ -55,7 +55,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: sensor:pwmfan
     chart: true
@@ -63,7 +63,7 @@
     refreshInterval: 2000
 
 - glances:
-    url: http://glances:61208
+    url: https://glances.leojan.fr
     version: 4
     metric: sensor:rpi_volt
     chart: true
