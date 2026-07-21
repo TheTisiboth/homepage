@@ -6,11 +6,15 @@
         icon: netdata.png
         href: https://netdata.leojan.fr
         description: Real-time performance monitoring
+        server: my-docker
+        container: netdata
 
     - Glances:
         icon: si-grafana
         href: https://glances.leojan.fr
         description: System monitoring dashboard
+        server: my-docker
+        container: glances
 
 - Infrastructure:
     - Dokploy:
@@ -22,12 +26,21 @@
         icon: uptime-kuma.png
         href: https://status.leojan.fr
         description: Uptime monitoring & status page
+        widget:
+          type: uptimekuma
+          url: https://status.leojan.fr
+          slug: "{{HOMEPAGE_VAR_KUMA_SLUG}}"
 
 - Applications:
     - AdGuard Home:
         icon: adguard-home.png
         href: https://adguard.leojan.fr
         description: DNS ad blocker & privacy protection
+        widget:
+          type: adguard
+          url: https://adguard.leojan.fr
+          username: "{{HOMEPAGE_VAR_ADGUARD_USER}}"
+          password: "{{HOMEPAGE_VAR_ADGUARD_PASS}}"
 
     - Vaultwarden:
         icon: vaultwarden.png

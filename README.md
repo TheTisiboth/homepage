@@ -4,7 +4,10 @@ Dashboard displaying Pi5 system metrics with graphs and a curated list of hosted
 
 ## Features
 
-- **Real-time system metrics with graphs**: CPU, RAM, disk, network, temperature, uptime
+- **Live header graphs**: CPU, RAM, temperature and storage sparklines pulled from Glances
+- **Live service widgets**: AdGuard Home (query/block stats) and Uptime Kuma (monitor status) render live data on their cards
+- **Container status dots**: services in this compose (netdata, glances) show Docker health via the mounted socket
+- **Weather + greeting + clock** header widgets
 - **Netdata**: Comprehensive real-time monitoring with beautiful interactive charts
 - **Glances integration**: Additional system monitoring with historical charts
 - **Curated service list**: Services are listed explicitly in `config/services.yaml` (Docker auto-discovery is intentionally disabled)
@@ -31,8 +34,14 @@ Dokploy automatically:
 ## Configuration
 
 - `config/settings.yaml` - Dashboard appearance & layout (group order/columns)
-- `config/widgets.yaml` - System resource widgets
-- `config/services.yaml` - The curated list of hosted services
+- `config/widgets.yaml` - Header widgets: greeting, clock, weather, resources, Glances graphs
+- `config/services.yaml` - The curated list of hosted services (incl. live widgets)
+- `config/docker.yaml` - Docker socket server for container status dots
+
+Widget secrets are read from `.env` on the Pi via `HOMEPAGE_VAR_*` (see
+`.env.example`): `ADGUARD_USER`/`ADGUARD_PASS` for the AdGuard widget and
+`KUMA_SLUG` (a published Uptime Kuma status-page slug) for the Kuma widget.
+Leave them blank to disable the respective widget.
 
 ## Adding a service
 

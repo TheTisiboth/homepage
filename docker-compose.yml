@@ -26,6 +26,9 @@ services:
       - PUID=1000
       - PGID=984
       - HOMEPAGE_ALLOWED_HOSTS=dashboard.leojan.fr,192.168.178.13:${APP_PORT:-3003},localhost:${APP_PORT:-3003}
+      - HOMEPAGE_VAR_ADGUARD_USER=${ADGUARD_USER:-}
+      - HOMEPAGE_VAR_ADGUARD_PASS=${ADGUARD_PASS:-}
+      - HOMEPAGE_VAR_KUMA_SLUG=${KUMA_SLUG:-}
     restart: unless-stopped
     networks:
       - dokploy-network

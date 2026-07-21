@@ -1,0 +1,5 @@
+---
+# Docker socket is mounted into the homepage container (see docker-compose.yml).
+# Reference this server + a container name on a service to get a status dot.
+my-docker:
+  socket: /var/run/docker.sock

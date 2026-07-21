@@ -1,10 +1,7 @@
 ---
-- resources:
-    cpu: true
-    memory: true
-    cputemp: true
-    uptime: true
-    label: Pi5
+- greeting:
+    text_size: xl
+    text: Pi5 Dashboard
 
 - datetime:
     text_size: xl
@@ -12,3 +9,41 @@
       dateStyle: long
       timeStyle: short
       hour12: false
+
+- openmeteo:
+    label: Berlin
+    latitude: 52.5200
+    longitude: 13.4050
+    units: metric
+    cache: 5
+
+- resources:
+    cpu: true
+    memory: true
+    cputemp: true
+    uptime: true
+    label: Pi5
+
+# Live system graphs pulled from the Glances container (sparkline charts).
+# Device/sensor names may differ on your Pi — verify in the Glances web UI and
+# tweak the metric suffixes (e.g. disk:mmcblk0 for SD, sensor label for temp).
+- glances:
+    url: http://glances:61208
+    metric: cpu
+    chart: true
+    label: CPU
+- glances:
+    url: http://glances:61208
+    metric: memory
+    chart: true
+    label: RAM
+- glances:
+    url: http://glances:61208
+    metric: sensor:cpu_thermal
+    chart: true
+    label: Temp
+- glances:
+    url: http://glances:61208
+    metric: disk:nvme0n1
+    chart: true
+    label: Storage
