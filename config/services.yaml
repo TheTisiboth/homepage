@@ -81,6 +81,7 @@
         icon: docker.png
         href: https://dokploy.home.leojan.fr
         description: Container management platform
+        siteMonitor: http://dokploy:3000
 
     - Uptime Kuma:
         icon: uptime-kuma.png
