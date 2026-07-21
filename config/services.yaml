@@ -60,6 +60,15 @@
           chart: true
           pointsLimit: 30
           refreshInterval: 5000
+    - Fan:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: "sensor:pwmfan 0"
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
 
 # Not in the row-style System group: list widgets need to grow to their full
 # height, which a shared-height row would clip to a single line.
