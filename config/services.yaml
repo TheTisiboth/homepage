@@ -119,6 +119,7 @@
     - Frisbee Bot:
         icon: telegram.png
         description: Ultimate Frisbee training reminder bot
+        siteMonitor: http://frisbee-bot:3004/health
 
     - WebCV Frontend:
         icon: mdi-file-account
