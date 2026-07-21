@@ -42,6 +42,40 @@
           chart: true
           pointsLimit: 30
           refreshInterval: 5000
+    - Network:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: network:eth0
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
+    - Fan:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: "sensor:pwmfan 0"
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
+    - Containers:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: containers
+          chart: false
+          refreshInterval: 5000
+    - Top Processes:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: process
+          chart: false
+          refreshInterval: 5000
 
 - Monitoring:
     - Netdata:
