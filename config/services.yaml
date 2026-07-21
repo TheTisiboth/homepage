@@ -45,12 +45,12 @@
 
     # Nested sub-group inside Applications
     - Web CV:
-        - Frontend:
+        - WebCV Frontend:
             icon: mdi-file-account
             href: https://leojan.fr
             description: Personal CV website
 
-        - CV Backoffice:
+        - WebCV Backoffice:
             icon: strapi.png
             href: https://admin.leojan.fr
             description: Strapi CMS — admin for the CV website
