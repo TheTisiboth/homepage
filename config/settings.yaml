@@ -24,7 +24,3 @@ layout:
     style: row
     columns: 4
     header: true
-    Web CV:
-      style: row
-      columns: 2
-      header: true

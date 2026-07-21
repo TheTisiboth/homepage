@@ -43,14 +43,12 @@
         icon: telegram.png
         description: Ultimate Frisbee training reminder bot
 
-    # Nested sub-group inside Applications
-    - Web CV:
-        - WebCV Frontend:
-            icon: mdi-file-account
-            href: https://leojan.fr
-            description: Personal CV website
+    - WebCV Frontend:
+        icon: mdi-file-account
+        href: https://leojan.fr
+        description: Personal CV website
 
-        - WebCV Backoffice:
-            icon: strapi.png
-            href: https://admin.leojan.fr
-            description: Strapi CMS — admin for the CV website
+    - WebCV Backoffice:
+        icon: strapi.png
+        href: https://admin.leojan.fr
+        description: Strapi CMS — admin for the CV website
