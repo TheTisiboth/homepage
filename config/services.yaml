@@ -1,4 +1,6 @@
 ---
+# Services are curated here by hand (Docker auto-discovery is intentionally
+# disabled — see README). Add every Pi-hosted service to the right group below.
 - Monitoring:
     - Netdata:
         icon: netdata.png
@@ -16,13 +18,37 @@
         href: https://dokploy.home.leojan.fr
         description: Container management platform
 
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: https://status.leojan.fr
+        description: Uptime monitoring & status page
+
 - Applications:
     - AdGuard Home:
         icon: adguard-home.png
         href: https://adguard.leojan.fr
         description: DNS ad blocker & privacy protection
 
-    - Uptime Kuma:
-        icon: uptime-kuma.png
-        href: https://status.leojan.fr
-        description: Uptime monitoring & status page
+    - Vaultwarden:
+        icon: vaultwarden.png
+        href: https://vault.leojan.fr
+        description: Password manager (Bitwarden-compatible)
+
+    - Web CV:
+        icon: mdi-file-account
+        href: https://leojan.fr
+        description: Personal CV website
+
+    - Strapi CMS:
+        icon: strapi.png
+        href: https://admin.leojan.fr
+        description: CV content backend (Strapi)
+
+    - Advent Calendar:
+        icon: mdi-calendar-star
+        href: https://calendar.leojan.fr
+        description: Interactive advent calendar app
+
+    - Frisbee Bot:
+        icon: telegram.png
+        description: Ultimate Frisbee training reminder bot

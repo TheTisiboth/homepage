@@ -1,13 +1,13 @@
 # Homepage Dashboard for Pi5
 
-Dashboard displaying Pi5 system metrics with graphs and Docker containers via auto-discovery.
+Dashboard displaying Pi5 system metrics with graphs and a curated list of hosted services.
 
 ## Features
 
 - **Real-time system metrics with graphs**: CPU, RAM, disk, network, temperature, uptime
 - **Netdata**: Comprehensive real-time monitoring with beautiful interactive charts
 - **Glances integration**: Additional system monitoring with historical charts
-- **Docker auto-discovery**: Automatically shows all running containers from Dokploy
+- **Curated service list**: Services are listed explicitly in `config/services.yaml` (Docker auto-discovery is intentionally disabled)
 - **Persistent volumes**: Config survives container restarts
 - **Dokploy compatible**: Uses dokploy-network for integration
 - **Dark theme** optimized for readability
@@ -30,29 +30,31 @@ Dokploy automatically:
 
 ## Configuration
 
-- `config/settings.yaml` - Dashboard appearance & layout
+- `config/settings.yaml` - Dashboard appearance & layout (group order/columns)
 - `config/widgets.yaml` - System resource widgets
-- `config/docker.yaml` - Docker auto-discovery settings
-- `config/services.yaml` - Custom services (optional)
+- `config/services.yaml` - The curated list of hosted services
 
-## Docker Auto-Discovery
+## Adding a service
 
-All running containers are automatically discovered and displayed. No manual configuration needed.
+Docker auto-discovery is **intentionally disabled** — services are listed by hand in
+`config/services.yaml` so naming, grouping and icons stay under central control (the app
+repos carry no `homepage.*` labels). To surface a new service, add an entry under the
+right group:
 
-To exclude containers from appearing, add label to container:
 ```yaml
-labels:
-  - "homepage.hide=true"
+- Applications:
+    - My App:
+        icon: my-app.png          # dashboard-icons name, or an mdi-*/si-* icon
+        href: https://my-app.leojan.fr   # omit for a card with no link
+        description: What it does
 ```
 
-To customize container display, add labels:
-```yaml
-labels:
-  - "homepage.name=My App"
-  - "homepage.description=App description"
-  - "homepage.icon=docker.png"
-  - "homepage.href=http://localhost:8080"
-```
+Groups and their column counts are defined in `config/settings.yaml`. Icons resolve
+against [dashboard-icons](https://github.com/walkxcode/dashboard-icons); `mdi-*` and
+`si-*` prefixes also work.
+
+To re-enable auto-discovery later, create `config/docker.yaml` with a `socket:
+/var/run/docker.sock` instance and add `homepage.*` labels to each container.
 
 ## Services
 
@@ -90,7 +92,6 @@ Config auto-syncs from repo on every deploy:
 - Glances provides detailed metrics with 2-second refresh
 - Netdata provides 1000+ metrics with 1-second granularity
 - Named volumes persist config/data across container/compose removals
-- Requires Docker socket access for container discovery
 - Requires host filesystem read access for system metrics
 - Both Glances and Netdata run in privileged mode for full system access
 
