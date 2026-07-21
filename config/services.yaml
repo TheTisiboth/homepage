@@ -60,18 +60,7 @@
           chart: true
           pointsLimit: 30
           refreshInterval: 5000
-    - Fan:
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: "sensor:pwmfan 0"
-          chart: true
-          pointsLimit: 30
-          refreshInterval: 5000
 
-# Not in the row-style System group: list widgets need to grow to their full
-# height, which a shared-height row would clip to a single line.
 - Monitoring:
     - Netdata:
         icon: netdata.png
@@ -117,11 +106,13 @@
         icon: vaultwarden.png
         href: https://vault.leojan.fr
         description: Password manager (Bitwarden-compatible)
+        siteMonitor: http://vaultwarden:80
 
     - Advent Calendar:
         icon: mdi-calendar-star
         href: https://calendar.leojan.fr
         description: Interactive advent calendar app
+        siteMonitor: http://adventcalendar-app-j8mrie-app-1:3006
 
     - Frisbee Bot:
         icon: telegram.png
@@ -131,8 +122,10 @@
         icon: mdi-file-account
         href: https://leojan.fr
         description: Personal CV website
+        siteMonitor: http://webcv-front:3007
 
     - WebCV Backoffice:
         icon: strapi.png
         href: https://admin.leojan.fr
         description: Strapi CMS — admin for the CV website
+        siteMonitor: http://webcv_backend:3008
