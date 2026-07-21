@@ -17,37 +17,11 @@
     units: metric
     cache: 5
 
+# Compact at-a-glance header block (live time-series graphs are the chart cards
+# in the "System" group — see services.yaml).
 - resources:
     cpu: true
     memory: true
     cputemp: true
     uptime: true
     label: Pi5
-
-# Live system graphs pulled from the Glances container (sparkline charts).
-# Device/sensor names may differ on your Pi — verify in the Glances web UI and
-# tweak the metric suffixes (e.g. disk:mmcblk0 for SD, sensor label for temp).
-- glances:
-    url: http://glances:61208
-    version: 4
-    metric: cpu
-    chart: true
-    label: CPU
-- glances:
-    url: http://glances:61208
-    version: 4
-    metric: memory
-    chart: true
-    label: RAM
-- glances:
-    url: http://glances:61208
-    version: 4
-    metric: "sensor:cpu_thermal 0"
-    chart: true
-    label: Temp
-- glances:
-    url: http://glances:61208
-    version: 4
-    metric: "fs:/host"
-    chart: true
-    label: Storage

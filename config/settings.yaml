@@ -12,6 +12,10 @@ quicklaunch:
 hideVersion: true
 showStats: false
 layout:
+  System:
+    style: row
+    columns: 4
+    header: true
   Monitoring:
     style: row
     columns: 2

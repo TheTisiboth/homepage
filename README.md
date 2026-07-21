@@ -4,7 +4,7 @@ Dashboard displaying Pi5 system metrics with graphs and a curated list of hosted
 
 ## Features
 
-- **Live header graphs**: CPU, RAM, temperature and storage sparklines pulled from Glances
+- **Live time-series graphs**: CPU, RAM, temperature and storage usage chart cards (Glances service widget) in the `System` group, plus a compact resources block in the header
 - **Live service widgets**: AdGuard Home (query/block stats) and Uptime Kuma (monitor status) render live data on their cards
 - **Container status dots**: services in this compose (netdata, glances) show Docker health via the mounted socket
 - **Weather + greeting + clock** header widgets

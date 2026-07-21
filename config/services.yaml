@@ -1,6 +1,48 @@
 ---
 # Services are curated here by hand (Docker auto-discovery is intentionally
 # disabled — see README). Add every Pi-hosted service to the right group below.
+
+# Live time-series graphs, one card each, driven by the Glances service widget.
+# Homepage polls every refreshInterval and keeps pointsLimit points, so the
+# chart shows the recent evolution (CPU %, RAM, temp, storage usage).
+- System:
+    - CPU:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: cpu
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
+    - RAM:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: memory
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
+    - Temperature:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: "sensor:cpu_thermal 0"
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
+    - Storage:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: "fs:/host"
+          chart: true
+          pointsLimit: 30
+          refreshInterval: 5000
+
 - Monitoring:
     - Netdata:
         icon: netdata.png
