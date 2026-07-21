@@ -86,6 +86,7 @@
         icon: uptime-kuma.png
         href: https://status.leojan.fr/status/all
         description: Uptime monitoring & status page
+        siteMonitor: http://uptime-kuma:3001
         widget:
           type: uptimekuma
           url: http://uptime-kuma:3001
@@ -96,6 +97,7 @@
         icon: adguard-home.png
         href: https://adguard.leojan.fr
         description: DNS ad blocker & privacy protection
+        siteMonitor: http://adguardhome:80
         widget:
           type: adguard
           url: http://adguardhome:80

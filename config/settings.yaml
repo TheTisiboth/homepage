@@ -7,6 +7,7 @@ theme: dark
 color: slate
 headerStyle: underlined
 target: _self
+statusStyle: dot
 quicklaunch:
   hideInternetSearch: true
 hideVersion: true
