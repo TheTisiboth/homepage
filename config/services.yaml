@@ -72,33 +72,6 @@
 
 # Not in the row-style System group: list widgets need to grow to their full
 # height, which a shared-height row would clip to a single line.
-# Homepage's glances containers/process widgets only render the single top row
-# under the v4 API, so we hit the Glances REST API directly with customapi and
-# render the full list. processlist is already CPU-sorted → limit 5 = top 5.
-- Docker & Processes:
-    - Containers:
-        widget:
-          type: customapi
-          url: http://glances:61208/api/4/containers
-          display: dynamic-list
-          refreshInterval: 5000
-          mappings:
-            name: name
-            label: status
-            limit: 20
-            format: text
-    - Top Processes:
-        widget:
-          type: customapi
-          url: http://glances:61208/api/4/processlist
-          display: dynamic-list
-          refreshInterval: 5000
-          mappings:
-            name: name
-            label: cpu_percent
-            format: float
-            limit: 5
-
 - Monitoring:
     - Netdata:
         icon: netdata.png
