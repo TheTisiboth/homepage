@@ -99,7 +99,7 @@
         description: Uptime monitoring & status page
         widget:
           type: uptimekuma
-          url: https://status.leojan.fr
+          url: http://uptime-kuma:3001
           slug: "{{HOMEPAGE_VAR_KUMA_SLUG}}"
 
 - Applications:
@@ -109,7 +109,7 @@
         description: DNS ad blocker & privacy protection
         widget:
           type: adguard
-          url: https://adguard.leojan.fr
+          url: http://adguardhome:80
           username: "{{HOMEPAGE_VAR_ADGUARD_USER}}"
           password: "{{HOMEPAGE_VAR_ADGUARD_PASS}}"
 
