@@ -16,6 +16,9 @@ layout:
     style: row
     columns: 4
     header: true
+  Docker & Processes:
+    columns: 2
+    header: true
   Monitoring:
     style: row
     columns: 2
