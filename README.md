@@ -17,7 +17,11 @@ Dashboard displaying Pi5 system metrics with graphs and Docker containers via au
 1. Create new compose project in Dokploy UI
 2. Point to this repository
 3. Deploy
-4. Access at `http://your-pi-ip:3003`
+4. Access at `http://your-pi-ip:$APP_PORT` (default 3003)
+
+## Port
+
+Set `APP_PORT` in `.env` to serve the homepage dashboard on a different external port (default 3003; container stays on 3000). Glances (61208) and netdata (19999) keep their fixed ports.
 
 Dokploy automatically:
 - Creates dokploy-network
@@ -52,7 +56,7 @@ labels:
 
 ## Services
 
-- **homepage**: Main dashboard (https://dashboard.leojan.fr or http://192.168.178.13:3003)
+- **homepage**: Main dashboard (https://dashboard.leojan.fr or http://192.168.178.13:$APP_PORT)
 - **netdata**: Real-time performance monitoring (https://netdata.leojan.fr or http://192.168.178.13:19999)
   - 1000+ metrics tracked
   - Interactive charts with 1-second granularity
@@ -80,7 +84,7 @@ Config auto-syncs from repo on every deploy:
 
 ## Notes
 
-- Homepage: https://dashboard.leojan.fr (or port 3003 locally)
+- Homepage: https://dashboard.leojan.fr (or `APP_PORT` locally, default 3003)
 - Netdata: https://netdata.leojan.fr (or port 19999 locally)
 - Uses dokploy-network for container integration
 - Glances provides detailed metrics with 2-second refresh

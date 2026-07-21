@@ -17,7 +17,7 @@ services:
     depends_on:
       - homepage-init
     ports:
-      - "3003:3000"
+      - "${APP_PORT:-3003}:3000"
     volumes:
       - homepage-config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -25,7 +25,7 @@ services:
     environment:
       - PUID=1000
       - PGID=984
-      - HOMEPAGE_ALLOWED_HOSTS=dashboard.leojan.fr,192.168.178.13:3003,localhost:3003
+      - HOMEPAGE_ALLOWED_HOSTS=dashboard.leojan.fr,192.168.178.13:${APP_PORT:-3003},localhost:${APP_PORT:-3003}
     restart: unless-stopped
     networks:
       - dokploy-network
