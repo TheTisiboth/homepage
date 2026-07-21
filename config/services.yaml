@@ -95,7 +95,7 @@
 
     - Uptime Kuma:
         icon: uptime-kuma.png
-        href: https://status.leojan.fr
+        href: https://status.leojan.fr/status/all
         description: Uptime monitoring & status page
         widget:
           type: uptimekuma
