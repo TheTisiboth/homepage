@@ -34,16 +34,6 @@
         href: https://vault.leojan.fr
         description: Password manager (Bitwarden-compatible)
 
-    - Web CV:
-        icon: mdi-file-account
-        href: https://leojan.fr
-        description: Personal CV website
-
-    - Strapi CMS:
-        icon: strapi.png
-        href: https://admin.leojan.fr
-        description: CV content backend (Strapi)
-
     - Advent Calendar:
         icon: mdi-calendar-star
         href: https://calendar.leojan.fr
@@ -52,3 +42,14 @@
     - Frisbee Bot:
         icon: telegram.png
         description: Ultimate Frisbee training reminder bot
+
+- Web CV:
+    - Frontend:
+        icon: mdi-file-account
+        href: https://leojan.fr
+        description: Personal CV website
+
+    - Backoffice:
+        icon: strapi.png
+        href: https://admin.leojan.fr
+        description: Strapi CMS — CV content backend
