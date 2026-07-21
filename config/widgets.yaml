@@ -29,21 +29,25 @@
 # tweak the metric suffixes (e.g. disk:mmcblk0 for SD, sensor label for temp).
 - glances:
     url: http://glances:61208
+    version: 4
     metric: cpu
     chart: true
     label: CPU
 - glances:
     url: http://glances:61208
+    version: 4
     metric: memory
     chart: true
     label: RAM
 - glances:
     url: http://glances:61208
-    metric: sensor:cpu_thermal
+    version: 4
+    metric: "sensor:cpu_thermal 0"
     chart: true
     label: Temp
 - glances:
     url: http://glances:61208
-    metric: disk:nvme0n1
+    version: 4
+    metric: "fs:/host"
     chart: true
     label: Storage
