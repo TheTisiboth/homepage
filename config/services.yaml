@@ -50,7 +50,7 @@
             href: https://leojan.fr
             description: Personal CV website
 
-        - Backoffice:
+        - CV Backoffice:
             icon: strapi.png
             href: https://admin.leojan.fr
-            description: Strapi CMS — CV content backend
+            description: Strapi CMS — admin for the CV website
