@@ -111,6 +111,12 @@
         description: Password manager (Bitwarden-compatible)
         siteMonitor: http://vaultwarden:80
 
+    - Nextcloud:
+        icon: nextcloud.png
+        href: https://cloud.leojan.fr
+        description: Self-hosted cloud storage & file sync
+        siteMonitor: http://nextcloud:80
+
     - Advent Calendar:
         icon: mdi-calendar-star
         href: https://calendar.leojan.fr
