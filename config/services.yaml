@@ -115,7 +115,7 @@
         icon: nextcloud.png
         href: https://cloud.leojan.fr
         description: Self-hosted cloud storage & file sync
-        siteMonitor: http://nextcloud:80
+        siteMonitor: http://nextcloud:80/status.php
 
     - Advent Calendar:
         icon: mdi-calendar-star
