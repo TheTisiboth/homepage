@@ -10,6 +10,7 @@
     "Vaultwarden": "https://github.com/TheTisiboth/vaultwarden",
     "Nextcloud": "https://github.com/TheTisiboth/nextcloud",
     "Advent Calendar": "https://github.com/TheTisiboth/AdventCalendar",
+    "Grafana": "https://github.com/TheTisiboth/observability",
     "Frisbee Bot": "https://github.com/TheTisiboth/dot",
     "WebCV Frontend": "https://github.com/TheTisiboth/WebCV",
     "WebCV Backoffice": "https://github.com/TheTisiboth/WebCV_backend",
