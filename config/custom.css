@@ -1,0 +1,20 @@
+.service-github {
+  opacity: 0.7;
+  color: rgb(100 116 139); /* theme-500, matches other service-tag icons in light mode */
+  transition: opacity 0.15s ease, color 0.15s ease;
+  padding: 0 4px;
+}
+
+.service-github:hover {
+  opacity: 1;
+}
+
+.service-github svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.dark .service-github {
+  color: rgb(203 213 225); /* theme-300, matches dark-mode service-tag icons */
+}
