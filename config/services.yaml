@@ -76,6 +76,14 @@
         server: my-docker
         container: glances
 
+    - Grafana:
+        icon: grafana.png
+        href: https://grafana.leojan.fr
+        description: Metrics dashboards & visualization
+        server: my-docker
+        container: grafana-app-xkp9ac-grafana-1
+        siteMonitor: http://grafana:3000
+
 - Infrastructure:
     - Dokploy:
         icon: docker.png
