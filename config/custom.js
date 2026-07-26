@@ -5,9 +5,6 @@
 // MutationObserver re-adds the badge whenever that happens.
 (function () {
   var GITHUB_LINKS = {
-    "Netdata": "https://github.com/TheTisiboth/homepage",
-    "Glances": "https://github.com/TheTisiboth/homepage",
-    "Dokploy": "https://github.com/Dokploy/dokploy",
     "Uptime Kuma": "https://github.com/TheTisiboth/monitoring",
     "AdGuard Home": "https://github.com/TheTisiboth/adguard-home",
     "Vaultwarden": "https://github.com/TheTisiboth/vaultwarden",
