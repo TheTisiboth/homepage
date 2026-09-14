@@ -1,8 +1,6 @@
-version: "3.8"
-
 services:
   homepage-init:
-    image: alpine:latest
+    image: alpine:3
     container_name: homepage-init
     volumes:
       - homepage-config:/config
@@ -12,7 +10,7 @@ services:
       - dokploy-network
 
   homepage:
-    image: ghcr.io/gethomepage/homepage:latest
+    image: ghcr.io/gethomepage/homepage:v1.9.0
     container_name: homepage
     depends_on:
       - homepage-init
@@ -34,7 +32,7 @@ services:
       - dokploy-network
 
   glances:
-    image: nicolargo/glances:latest
+    image: nicolargo/glances:4.5.6
     container_name: glances
     restart: unless-stopped
     pid: host
@@ -50,6 +48,7 @@ services:
       - dokploy-network
 
   netdata:
+    # latest is Netdata's nightly channel, already running; pinning a stable release would downgrade its database
     image: netdata/netdata:latest
     container_name: netdata
     hostname: leopi

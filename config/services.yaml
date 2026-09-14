@@ -127,7 +127,7 @@
         icon: mdi-calendar-star
         href: https://calendar.leojan.fr
         description: Interactive advent calendar app
-        siteMonitor: http://adventcalendar-app-j8mrie-app-1:3006
+        siteMonitor: http://adventcalendar:3006
 
     - Frisbee Bot:
         icon: telegram.png
