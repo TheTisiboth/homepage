@@ -134,6 +134,12 @@
         description: Ultimate Frisbee training reminder bot
         siteMonitor: http://frisbee-bot:3004/health
 
+    - iSponsorBlockTV:
+        icon: mdi-youtube-tv
+        description: Skips YouTube sponsors & ads on the Google TV
+        server: my-docker
+        container: isponsorblocktv
+
     - WebCV Frontend:
         icon: mdi-file-account
         href: https://leojan.fr
